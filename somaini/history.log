@@ -1,0 +1,4 @@
+    1  cd somaini
+    2  terraform -v
+    3  terraform init
+    4  history >> history.log
