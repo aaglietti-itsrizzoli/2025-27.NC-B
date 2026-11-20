@@ -1,0 +1,7 @@
+    1  terraform -v
+    2  terraform init
+    3  ls
+    4  cd maciasgarcia/
+    5  ls
+    6  terraform init
+    7  history >> history.log
