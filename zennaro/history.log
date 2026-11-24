@@ -1,0 +1,14 @@
+    1  git push --force origin main
+    2  cd zennaro
+    3  terraform -v
+    4  terraform init
+    5  history >> history.log
+    1  git push --force origin main
+    2  cd zennaro
+    3  terraform -v
+    4  terraform init
+    5  history >> history.log
+    6  git reset --soft HEAD~1
+    7  echo ".terraform/" > .gitignore
+    8  git rm -rf --cached .terraform
+    9  history >> history.log
