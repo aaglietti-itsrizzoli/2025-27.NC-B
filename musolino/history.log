@@ -1,0 +1,41 @@
+    1  cd musolino
+    2  terraform -v
+    3  terraform init
+    4  history >> history.log
+    1  cd musolino
+    2  terraform -v
+    3  terraform init
+    4  history >> history.log
+    5  cd musolino
+    6  terraform -v
+    7  terraform init
+    8  history >> history.log
+    1  cd musolino
+    2  terraform -v
+    3  terraform init
+    4  history >> history.log
+    5  cd musolino
+    6  terraform -v
+    7  terraform init
+    8  history >> history.log
+    9  git pull
+   10  git reset --soft HEAD~2
+   11  cd /workspaces/musolino
+   12  echo ".terraform/" >> .gitignore
+   13  git add .gitignore
+   14  cd /workspaces/musolino
+   15  git push
+   16  cd /workspaces/musolino
+   17  git reset --soft origin/main
+   18  git reset
+   19  echo -e ".terraform/\n*.tfstate\n*.tfstate.*\n*.json" > .gitignore
+   20  git add .gitignore musolino/
+   21  git commit -m "Consegna slide 26 e 27"
+   22  git push
+   23  export GOOGLE_APPLICATION_CREDENTIALS="/workspaces/musolino/exalted-pattern-424313-j3-8da7ac115860.json"
+   24  cd /workspaces/musolino/musolino
+   25  terraform plan
+   26  terraform init -upgrade
+   27  terraform plan
+   28  terraform apply
+   29  history >> history.log
