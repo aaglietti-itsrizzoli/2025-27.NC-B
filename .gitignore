@@ -1,0 +1,6 @@
+
+cuzzi/.terraform/providers/registry.terraform.io/hashicorp/google/8.12.0/linux_amd64/LICENSE.txt
+.terraform/
+*.tfstate
+*.tfstate.*
+*.json
