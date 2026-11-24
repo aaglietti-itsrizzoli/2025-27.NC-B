@@ -9,5 +9,27 @@ terraform {
 
 provider "google" {
   project = "exalted-pattern-424313-j3"
-  # Configuration options
+  #  region  = "us-central1"
+
+}
+
+resource "google_compute_instance" "pincopallino" {
+  name         = "debian12-vm"
+  machine_type = "e2-micro" # il taglio più economico (2 vCPU condivise, 1 GB RAM)
+  zone         = "us-central1-a"
+
+  boot_disk {
+    initialize_params {
+      image = "debian-cloud/debian-12"
+      #size  = 10            # GB
+      #type  = "pd-standard" # disco più economico
+    }
+  }
+
+  network_interface {
+    network = "default"
+
+    # IP pubblico effimero: rimuovi il blocco se non ti serve l'accesso da internet
+    access_config {}
+  }
 }
