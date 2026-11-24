@@ -9,4 +9,4 @@ terraform {
 
 provider "google" {
   # Configuration options
-} 
+}
