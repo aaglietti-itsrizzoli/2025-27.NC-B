@@ -1,0 +1,17 @@
+    1  terraform -v
+    2  terraform init
+    3  history>> history.log
+    1  terraform -v
+    2  terraform init
+    3  history>> history.log
+    4  commit/sync
+    5  cd /workspaces/2025-27.NC-B
+    6  mv main.tf history.log elhallam/
+    7  cd elhallam
+    8  cd /workspaces/2025-27.NC-B
+    9  mv main.tf history.log elhallam/
+   10  rm -rf /workspaces/2025-27.NC-B/.terraform /workspaces/2025-27.NC-B/.terraform.lock.hcl /workspaces/2025-27.NC-B/history.log
+   11  cd /workspaces/2025-27.NC-B/elhallam
+   12  terraform -v
+   13  terraform init
+   14  history >> history.log
