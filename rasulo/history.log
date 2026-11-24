@@ -1,0 +1,8 @@
+    1  terraform {
+    2  }
+    3  provider "google" {
+    4  }
+    5  cd rasulo
+    6  terraform -v
+    7  terraform init
+    8  history >> history.log
