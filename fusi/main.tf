@@ -13,16 +13,23 @@ provider "google" {
 
 }
 
-resource "google_compute_instance" "pincopallino" {
-  name         = "debian12-vm"
+variable "vm_count" {
+  description = "Numero di VM da creare"
+  type        = number
+  default     = 5
+}
+
+resource "google_compute_instance" "vm" {
+  count        = var.vm_count
+  name         = "fusi-${count.index + 1}"
   machine_type = "e2-micro" # il taglio più economico (2 vCPU condivise, 1 GB RAM)
   zone         = "us-central1-a"
 
   boot_disk {
     initialize_params {
       image = "debian-cloud/debian-12"
-      #size  = 10            # GB
-      #type  = "pd-standard" # disco più economico
+      size  = 10            # GB
+      type  = "pd-standard" # disco più economico
     }
   }
 
