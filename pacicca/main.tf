@@ -13,7 +13,7 @@ provider "google" {
 }
 
 resource "google_compute_instance" "pincopallino" {
-  name         = "debian12-micro"
+  name         = "Pacicca"
   machine_type = "e2-micro"
   zone         = "europe-west8-a"
 
