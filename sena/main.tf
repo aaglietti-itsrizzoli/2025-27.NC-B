@@ -12,8 +12,15 @@ provider "google" {
   # region  = "europe-west8"
 }
 
+variable "vm_count" {
+  description = "Numero di VM da creare"
+  type        = number
+  default     = 3
+}
+
 resource "google_compute_instance" "vm_debian" {
-  name         = "sena"
+  count        = var.vm_count
+  name         = "vm-sena-${count.index + 1}"
   machine_type = "e2-micro"
   zone         = "europe-west8-a"
 
@@ -28,7 +35,7 @@ resource "google_compute_instance" "vm_debian" {
   network_interface {
     network = "default"
     access_config {
-      # Lascia vuoto per assegnare un IP pubblico effimero
+      # Assegna un IP pubblico effimero
     }
   }
 }
