@@ -8,6 +8,29 @@ terraform {
 }
 
 provider "google" {
-  # Configuration options
   project = "exalted-pattern-424313-j3" #il plugin di google cloud lavorerà su questo resource group
+  # region  = "europe-west8"
+}
+
+resource "google_compute_instance" "pincopallino" {
+  name         = "debian12-micro"
+  machine_type = "e2-micro"
+  zone         = "europe-west8-a"
+
+
+  boot_disk {
+    initialize_params {
+      image = "debian-cloud/debian-12" #obbligatorio
+      # size  = 10
+      # type  = "pd-standard"
+    }
+  }
+
+  network_interface {
+    network = "default"
+
+    access_config {
+      # Assegna un indirizzo IPv4 pubblico effimero.
+    }
+  }
 }
