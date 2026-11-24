@@ -9,7 +9,6 @@ terraform {
 provider "google" {
   project     = "exalted-pattern-424313-j3"
   region      = "europe-west1"
-  credentials = file("/tmp/sa-key.json")
 }
 
 variable "numero_vm" {
