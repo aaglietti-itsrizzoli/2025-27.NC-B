@@ -8,9 +8,7 @@ terraform {
 
 provider "google" {
   project     = "exalted-pattern-424313-j3"
-  region      = "europe-west1"
-  zone        = "europe-west1-b"
-  credentials = file("/tmp/sa-key.json")
+  region      = "europe-west1" 
 }
 
 resource "google_compute_instance" "vm_debian" {
