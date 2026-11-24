@@ -1,0 +1,12 @@
+    1  cd musolino
+    2  terraform -v
+    3  terraform init
+    4  history >> history.log
+    1  cd musolino
+    2  terraform -v
+    3  terraform init
+    4  history >> history.log
+    5  cd musolino
+    6  terraform -v
+    7  terraform init
+    8  history >> history.log
