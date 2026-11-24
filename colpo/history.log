@@ -1,0 +1,8 @@
+    1  cd colpo
+    2  terraform -v
+    3  terraform init
+    4  history >> history.log
+    1  cd colpo
+    2  terraform -v
+    3  terraform init
+    4  history >> history.log
