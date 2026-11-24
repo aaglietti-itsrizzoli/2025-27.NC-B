@@ -9,4 +9,5 @@ terraform {
 
 provider "google" {
   # Configuration options
+  project = "exalted-pattern-424313-j3" #il plugin di google cloud lavorerà su questo resource group
 }
